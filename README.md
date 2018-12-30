@@ -6,7 +6,7 @@
 
 A simple finance tracker to manage incomes and expenses.
 
-This project was generated with [swaaplate](https://github.com/inpercima/swaaplate) version 0.3.0-SNAPSHOT.
+This project was generated with [swaaplate](https://github.com/inpercima/swaaplate) version 0.3.0.
 
 ## Prerequisites
 
