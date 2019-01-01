@@ -23,6 +23,7 @@ This project was generated with [swaaplate](https://github.com/inpercima/swaapla
 ```bash
 # clone project
 git clone https://github.com/inpercima/finance-tracker
+cd finance-tracker
 ```
 
 ## Usage
