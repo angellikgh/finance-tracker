@@ -8,7 +8,7 @@ export const environment = {
   redirectNotFound: false,
   showFeatures: true,
   showLogin: false,
-  theme: 'pink-bluegrey',
+  theme: 'deeppurple-amber',
 };
 
 /*
