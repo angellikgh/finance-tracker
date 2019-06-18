@@ -1,12 +1,15 @@
-# project specific
+# begin project specific
 
+environment.dev.ts
+environment.mock.ts
+environment.prod.ts
 swaaplate-backup.json
 dist/
 
-# end of project specific
+# end project specific
 
-# Created by https://www.gitignore.io/api/node,eclipse,angular,intellij+all,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=node,eclipse,angular,intellij+all,visualstudiocode
+# Created by https://www.gitignore.io/api/node,angular,eclipse,intellij+all,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=node,angular,eclipse,intellij+all,visualstudiocode
 
 ### Angular ###
 ## Angular ##
@@ -40,7 +43,6 @@ testem.log
 .DS_Store
 
 ### Eclipse ###
-
 .metadata
 bin/
 tmp/
@@ -177,6 +179,9 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
+# JetBrains templates
+**___jb_tmp___
+
 ### Intellij+all Patch ###
 # Ignores the whole .idea folder and all .iml files
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
@@ -190,6 +195,9 @@ modules.xml
 .idea/misc.xml
 *.ipr
 
+# Sonarlint plugin
+.idea/sonarlint
+
 ### Node ###
 # Logs
 logs
@@ -197,6 +205,10 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
 pids
@@ -283,4 +295,4 @@ typings/
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/node,eclipse,angular,intellij+all,visualstudiocode
+# End of https://www.gitignore.io/api/node,angular,eclipse,intellij+all,visualstudiocode

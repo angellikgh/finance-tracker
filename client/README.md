@@ -1,7 +1,7 @@
 # finance-tracker - client
 
-[![dependencies Status](https://david-dm.org/inpercima/finance-tracker/status.svg)](https://david-dm.org/inpercima/finance-tracker?path=client)
-[![devDependencies Status](https://david-dm.org/inpercima/finance-tracker/dev-status.svg)](https://david-dm.org/inpercima/finance-tracker?type=dev&path=client)
+[![dependencies Status](https://david-dm.org/inpercima/finance-tracker/status.svg?path=client)](https://david-dm.org/inpercima/finance-tracker?path=client)
+[![devDependencies Status](https://david-dm.org/inpercima/finance-tracker/dev-status.svg?path=client)](https://david-dm.org/inpercima/finance-tracker?path=client&type=dev)
 
 ## Getting started
 
@@ -13,6 +13,18 @@ cd client
 yarn
 ```
 
+Create environment files for `devMode`, `mockMode` and `prodMode`.
+
+```bash
+cp src/environments/environment.ts src/environments/environment.dev.ts
+cp src/environments/environment.ts src/environments/environment.mock.ts
+cp src/environments/environment.ts src/environments/environment.prod.ts
+```
+
+Update these files for your environment.
+Change for prodMode the option `production` to `true` and for mockMode the option `api` to `http://localhost:3000/`.
+Note: These files will not be under version control and listed in .gitignore.
+
 ## Usage
 
 ### Recommendation
@@ -21,7 +33,7 @@ It is recommanded to use a server to get full access of all angular.
 You can do this for example with `yarn serve:mock`.
 For the other options your app should run on a server which you like.
 
-### DevMode with mock data
+### Run in devMode with mock data
 
 Start in a separate terminal a server with mock data, reachable on [http://localhost:3000/](http://localhost:3000/).
 
@@ -42,17 +54,20 @@ yarn serve:mock
 yarn watch:mock
 ```
 
-### DevMode with real data, if present
+### Run in devMode with real data, if present
 
 ```bash
 # build, reachable on http://localhost/app/path/to/dist/
 yarn build:dev
 
+# build and starts a server, rebuild after changes, reachable on http://localhost:4200/
+yarn serve:dev
+
 # build, rebuild after changes, reachable on http://localhost/app/path/to/dist/
 yarn watch:dev
 ```
 
-### ProdMode
+### Package in prodMode
 
 ```bash
 # build in prodMode, compressed, in ./dist you will find the output.
@@ -166,4 +181,4 @@ Name of a build-in theme from angular-material.
 * type: `string`
 * values: `deeppurple-amber`/`indigo-pink`/`pink-bluegrey`/`purple-green`
 
-Note: This option must also be changed in the angular.json if you want to change it.
+Note: This option must also be changed in the styles.css if you want to change it.
